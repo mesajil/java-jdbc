@@ -6,7 +6,10 @@ public class ConexionPostgres {
     // "Microsoft", "-", "contact@microsoft.com", "+99 999 999 999"));
 
     // Print Job
-    Job job = JobDAO.getJob(2);
+    Job job = JobDAO.getJob(1);
+    job.setType("Part-Time");
+    JobDAO.updateJob(job);
+
     if (job != null) {
       System.out.println(job.toString());
     }
